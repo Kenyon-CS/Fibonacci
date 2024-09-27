@@ -4,7 +4,7 @@ long long fib_recursive(long long n) {
   if ((n == 1) || (n == 0)) {
     return (n);
   } else {
-    return (fibr(n - 1) + fibr(n - 2));
+    return (fib_recursive(n - 1) + fib_recursive(n - 2));
   }
 }
 
@@ -20,7 +20,7 @@ int main() {
         return 1;
     }
 
-    long long result = fib_iterative(n);
+    long long result = fib_recursive(n);
     std::cout << "Fibonacci number " << n << " is " << result << std::endl;
 
     return 0;
