@@ -8,7 +8,7 @@
 long long fib_recursive_counter = 0;
 
 // Map to remember previous calls
-map<long long,long long> fibmap;
+std::map<long long,long long> fibmap;
 
 // Recursive Fibonacci function with memoization and counter
 long long fib_memoization(long long n) {
