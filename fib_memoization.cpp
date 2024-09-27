@@ -61,7 +61,7 @@ int main() {
 
         // Measure time for recursive function
         auto start_r = std::chrono::high_resolution_clock::now();
-        fib_r = fib_recursive(i);
+        fib_r = fib_memoization(i);
         auto end_r = std::chrono::high_resolution_clock::now();
         std::chrono::duration<double, std::milli> elapsed_r = end_r - start_r;
         time_r = elapsed_r.count();
