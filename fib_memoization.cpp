@@ -16,7 +16,7 @@ long long fib_memoization(long long n) {
     return (n);
   } 
   if (fibmap.find(n) != fibmap.end()) return fibmap[n]; 
-  auto result = fibr(n - 1) + fibr(n - 2);
+  auto result = fib_memoization(n - 1) + fib_memoization(n - 2);
   fibmap[n]=result;
   return result;
 }
